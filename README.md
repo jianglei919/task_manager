@@ -44,8 +44,8 @@ In this mode, the application is served via a Node.js server. The server hosts b
 #### Steps:
 
 1. Clone the Repository
-    •	git clone <git@github.com:jianglei919/task_manager.git>
-    •	cd <server>
+    •	git clone git@github.com:jianglei919/task_manager.git
+    •	cd server
 
 2. Install Dependencies
     •	npm install
@@ -71,12 +71,5 @@ In this mode, the application runs directly from the TaskManage.html file. Tasks
     •	The application will load in your browser.
     •	Tasks will be fetched from the server and managed through the REST API.
 
-├── server.js           # Node.js server with REST API
-├── tasks.json          # File for storing tasks (server-side mode)
-├── TaskManage.html     # Main HTML file
-├── script.js           # Client-side JavaScript
-├── styles.css          # Application styling
-├── package.json        # Node.js dependencies
-└── README.md           # Documentation
 
    
