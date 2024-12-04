@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <fieldset id="mainContainer">
+        <legend>
+            <h1>Task Manager</h1>
+        </legend>
+        <div id="leftColumn">
+            <!-- Search Bar -->
+            <fieldset id="searchBar">
+                <legend>Search Tasks</legend>
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+            </fieldset>
+
+            <!-- Task Form -->
+            <fieldset id="taskForm">
+                <legend>Add/Edit Task</legend>
+                <label>Title:</label><br>
+                <input type="text" id="taskTitle" required> <span>*</span>
+                <br>
+                <span id="taskTitleSpan"></span>
+                <br>
+                
+                <label>Description:</label><br>
+                <textarea id="taskDescription" rows="3" required></textarea> <span>*</span>
+                <br>
+                <span id="taskDescriptionSpan"></span>
+                <br>
+                
+                <label>Assigned To:</label><br>
+                <input type="text" id="taskAssignedTo" required> <span>*</span>
+                <br>
+                <span id="taskAssignedToSpan"></span>
+                <br>
+                
+                <label>Due Date:</label><br>
+                <input type="date" id="taskDueDate" required> <span>*</span>
+                <br>
+                <span id="taskDueDateSpan"></span>
+                <br>
+                
+                <label>Priority:</label><br>
+                <select id="taskPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select><br><br>
+                
+                <label>Status:</label><br>
+                <select id="taskStatus">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select><br><br>
+                
+                <button id="addTaskButton">Add Task</button>
+            </fieldset>
+        </div>
+
+        <div id="rightColumn">
+            <!-- Task List -->
+            <fieldset id="taskList">
+                <legend>Task List</legend>
+                <div id="tasksContainer"></div>
+            </fieldset>
+        </div>
+    </fieldset>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
