@@ -5,6 +5,15 @@ const SERVER_URL = 'http://localhost:3000';
 
 let editingTaskId = null;
 
+const datePicker = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
+    $('#taskDueDate').attr('min', formattedDate);
+};
+
 // Fetch all tasks from the server
 const fetchTasks = async () => {
     const response = await fetch(`${SERVER_URL}/api/tasks`);
@@ -173,6 +182,8 @@ const clearForm = () => {
 
 // Initialize
 $(document).ready(() => {
+    datePicker();
+
     // Event listener for adding task
     $('#addTaskButton').click(addTask);
 
